@@ -282,27 +282,6 @@ public class PlayerController : MonoBehaviour
         playerCC.Move(Time.deltaTime * ((Speed * relative.TransformDirection(direction)) + Vector3.up * GetYValue()));
     }
 
-    /*
-    private void Move(Vector3 direction, Transform relative)
-    {
-        if (!IsFixedPos)
-        {
-            lastTimeGrab += Time.deltaTime;
-            playerCC.Move(Time.deltaTime * ((Speed * relative.TransformDirection(direction)) + Vector3.up * GetYValue()));
-        }
-        else if (!TryToGrab()) 
-        {
-            IsFixedPos = false;
-        }
-        else if (Input.GetKeyDown(GameManager.InputSettings.playerJump))
-        {
-            IsFixedPos = false;
-            lastTimeJump = 0;
-            jumpCurveCurTime = 0;
-        }
-    }
-    */
-
     private Vector3 GetVector3ByInput()
     {
         Vector3 res = Vector3.zero;
@@ -404,17 +383,6 @@ public class PlayerController : MonoBehaviour
 
         return true;
     }
-
-    /*
-     
-    */
-
-    /*
-    private bool CheckCanGrab() 
-    {
-        
-    }
-    */
 
     //Is Up or Down any colliders check
     private float Check5Positions(Vector3 direction, float radius, float maxDistance)
